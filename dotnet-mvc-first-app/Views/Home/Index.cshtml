@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    .breadcrumb > li {
+        margin-right: 10px;
+    }
+
+        .breadcrumb > li + li:before {
+            padding: 0 8px;
+            color: #6c757d;
+        }
+
+    .breadcrumb {
+        background: #f9f9f9;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+    .content-header {
+        display: flex;
+        justify-content: center; /* posisikan di tengah */
+        margin-top: 10px;
+    }
+</style>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <section class="content-header">
+        <ol class="breadcrumb">
+            <li><a href="@Url.Action("Index", "Dashboard")"><i class="fa fa-Dashboard"></i> DashBoard</a></li>
+            <li><a href="@Url.Action("Index", "Profile")"><i class="fa fa-user"></i> Profile</a></li>
+            <li><a href="@Url.Action("Index", "Blog")"><i class="fa fa-book"></i> Blog</a></li>
+
+        </ol>
+    </section>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

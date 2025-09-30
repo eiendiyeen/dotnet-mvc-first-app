@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Blog";
+}
+<style>
+    .breadcrumb > li {
+        margin-right: 10px;
+    }
+
+        .breadcrumb > li + li:before {
+            padding: 0 8px;
+            color: #6c757d;
+        }
+
+    .breadcrumb {
+        background: #f9f9f9;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+</style>
+<section class="content-header">
+    <h1>
+        Blog
+        <small>Latest Posts</small>
+    </h1>
+        <ol class="breadcrumb">
+            <li><a href="@Url.Action("Index", "Dashboard")"><i class="fa fa-Dashboard"></i> Dashboard</a></li>    
+        </ol>
+</section>
+
+<section class="content">
+    <div class="row">
+        <!-- Blog Post 1 -->
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <img class="card-img-top" src="https://picsum.photos/600/300?random=1" alt="Blog Image">
+                <div class="card-body">
+                    <h5 class="card-title">Belajar ASP.NET MVC dengan AdminLTE</h5>
+                    <p class="card-text text-muted">Diposting pada 30 September 2025 • oleh Andienn</p>
+                    <p class="card-text">
+                        ASP.NET MVC bisa dipadukan dengan template AdminLTE agar tampilan aplikasi web lebih profesional dan modern...
+                    </p>
+                    <a href="#" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Post 2 -->
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <img class="card-img-top" src="https://picsum.photos/600/300?random=2" alt="Blog Image">
+                <div class="card-body">
+                    <h5 class="card-title">Tips Membuat Profile Page Menarik</h5>
+                    <p class="card-text text-muted">Diposting pada 28 September 2025 • oleh Andienn</p>
+                    <p class="card-text">
+                        Profile page adalah identitas kamu di aplikasi. Dengan tampilan rapi dan clean, user akan lebih nyaman melihat...
+                    </p>
+                    <a href="#" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
