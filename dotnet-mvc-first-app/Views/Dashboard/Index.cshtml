@@ -2,35 +2,93 @@
     ViewBag.Title = "Dashboard";
     Layout = "~/Views/Shared/_Layout.cshtml"; // Layout utama dengan AdminLTE
 }
+
 <style>
-.breadcrumb > li {
-    margin-right: 10px;
-}
+    /* Breadcrumb Styling */
+    .breadcrumb {
+        background: #ffffff;
+        padding: 8px 15px;
+        border-radius: 6px;
+        font-size: 14px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
 
-.breadcrumb > li + li:before {
-    padding: 0 8px;
-    color: #6c757d;
-}
+        .breadcrumb > li {
+            margin-right: 10px;
+        }
 
-.breadcrumb {
-    background: #f9f9f9;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 14px;
-}
+            .breadcrumb > li + li:before {
+                content: "›";
+                padding: 0 8px;
+                color: #888;
+            }
+
+    /* Judul Dashboard */
+    .content-header h1 {
+        font-size: 32px; /* gedein */
+        font-weight: 700; /* bold */
+        color: #000; /* ungu tua biar tegas */
+        margin-bottom: 10px;
+    }
+
+    .content-header small {
+        font-size: 16px;
+        color: #000; /* ungu medium */
+        font-weight: 500;
+    }
+
+    /* Small Box Styling */
+    .small-box {
+        border-radius: 14px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        transition: all 0.3s ease-in-out;
+    }
+
+        .small-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+    /* === Tema Warna Ungu Pastel === */
+    .bg-aqua, .bg-green, .bg-yellow, .bg-red {
+        background: linear-gradient(135deg, #d8b4fe, #a78bfa) !important;
+        color: #fff !important;
+    }
+
+    .small-box .inner h3,
+    .small-box .inner p {
+        color: #fff !important;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    }
+
+    .small-box .icon i {
+        color: rgba(255,255,255,0.85) !important;
+    }
+
+    .small-box-footer {
+        color: rgba(255,255,255,0.9) !important;
+    }
+
+        .small-box-footer:hover {
+            background: rgba(255,255,255,0.15) !important;
+        }
+
+    /* Background halaman */
+    .content-wrapper, .content {
+        background: #f3e8ff;
+    }
 </style>
 
-
+<!-- === Dashboard Content === -->
 <section class="content-header">
     <h1>
         Dashboard
         <small>Control panel</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="@Url.Action("Index", "Home")"><i class="fa fa-Home"></i> Home</a></li>
+        <li><a href="@Url.Action("Index", "Home")"><i class="fa fa-home"></i> Home</a></li>
         <li><a href="@Url.Action("Index", "Profile")"><i class="fa fa-user"></i> Profile</a></li>
         <li><a href="@Url.Action("Index", "Blog")"><i class="fa fa-book"></i> Blog</a></li>
-        
     </ol>
 </section>
 
@@ -97,38 +155,4 @@
             </div>
         </div>
     </div>
-
-    <!-- Chart contoh -->
-    <div class="row">
-        <section class="col-lg-12 connectedSortable">
-            <div class="box box-primary">
-                <div class="box-header with-border">
-                    <h3 class="box-title">Traffic Overview</h3>
-                </div>
-                <div class="box-body">
-                    <canvas id="trafficChart" style="height:250px"></canvas>
-                </div>
-            </div>
-        </section>
-    </div>
 </section>
-
-@section Scripts {
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        var ctx = document.getElementById("trafficChart").getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ["January", "February", "March", "April"],
-                datasets: [{
-                    label: 'Visitors',
-                    data: [120, 190, 300, 250],
-                    borderColor: "rgba(60,141,188,0.9)",
-                    backgroundColor: "rgba(60,141,188,0.5)",
-                    fill: true
-                }]
-            }
-        });
-    </script>
-}

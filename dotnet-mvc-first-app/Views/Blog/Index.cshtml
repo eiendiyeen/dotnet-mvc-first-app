@@ -1,7 +1,20 @@
 ﻿@{
     ViewData["Title"] = "Blog";
 }
+
 <style>
+    .content-header h1 {
+        font-size: 32px; /* gedein */
+        font-weight: 700; /* bold */
+        color: #000; /* ungu tua biar tegas */
+        margin-bottom: 10px;
+    }
+
+    .content-header small {
+        font-size: 16px;
+        color: #000; /* ungu medium */
+        font-weight: 500;
+    }
     .breadcrumb > li {
         margin-right: 10px;
     }
@@ -17,16 +30,84 @@
         border-radius: 6px;
         font-size: 14px;
     }
+
+    /* Header Tools */
+    .blog-header-tools {
+        padding: 15px 20px;
+        background: linear-gradient(135deg, #9c27b0, #ba68c8);
+        border-radius: 10px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+        margin-bottom: 20px;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+        .blog-header-tools .tagline h4 {
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0;
+        }
+
+    .search-bar input {
+        max-width: 250px;
+        border-radius: 20px;
+        border: none;
+        padding: 6px 15px;
+    }
+
+    /* Blog Card */
+    .card {
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        border: none;
+        background: #f8f0fc;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .card-title {
+        color: #6a1b9a;
+        font-weight: bold;
+    }
+
+    .btn-primary {
+        background: #9c27b0;
+        border: none;
+        border-radius: 20px;
+        padding: 5px 15px;
+        font-size: 13px;
+    }
+
+        .btn-primary:hover {
+            background: #7b1fa2;
+        }
 </style>
+
 <section class="content-header">
     <h1>
         Blog
         <small>Latest Posts</small>
     </h1>
-        <ol class="breadcrumb">
-            <li><a href="@Url.Action("Index", "Dashboard")"><i class="fa fa-Dashboard"></i> Dashboard</a></li>    
-        </ol>
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index", "Dashboard")"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+    </ol>
 </section>
+
+<!-- Tambahan header tools -->
+<div class="blog-header-tools">
+    <div class="tagline">
+        <h4>✨ Sharing knowledge, coding & creativity ✨</h4>
+    </div>
+    <div class="search-bar">
+        <input type="text" class="form-control" placeholder="Cari artikel...">
+    </div>
+</div>
 
 <section class="content">
     <div class="row">
@@ -46,7 +127,7 @@
         </div>
 
         <!-- Blog Post 2 -->
-        <div class="col-md-6">
+        <div class="col-md-6">F
             <div class="card shadow-sm">
                 <img class="card-img-top" src="https://picsum.photos/600/300?random=2" alt="Blog Image">
                 <div class="card-body">

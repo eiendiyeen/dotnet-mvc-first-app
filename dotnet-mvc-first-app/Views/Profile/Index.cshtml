@@ -3,6 +3,89 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<style>
+    /* === Tema Ungu Pastel untuk Profile === */
+
+    /* Background halaman */
+    .content-wrapper, .content {
+        background: #f3e8ff; /* ungu pastel very light */
+    }
+
+    .content-header h1 {
+        font-size: 32px; /* gedein */
+        font-weight: 700; /* bold */
+        color: #000; /* ungu tua biar tegas */
+        margin-bottom: 10px;
+    }
+
+    .content-header small {
+        font-size: 16px;
+        color: #000; /* ungu medium */
+        font-weight: 500;
+    }
+    /* Card styling */
+    .card {
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        border: none;
+    }
+
+    .card-primary.card-outline {
+        border-top: 3px solid #a78bfa; /* ungu pastel */
+    }
+
+    .card-header {
+        background: linear-gradient(135deg, #d8b4fe, #a78bfa);
+        color: #fff;
+    }
+
+    .card-title {
+        font-weight: bold;
+        color: #fff;
+    }
+
+    /* Profile image */
+    .profile-user-img {
+        border: 3px solid #a78bfa;
+        padding: 3px;
+    }
+
+    /* Username & subtitle */
+    .profile-username {
+        color: #6b21a8; /* ungu tua */
+        font-weight: bold;
+    }
+
+    .text-muted {
+        color: #6d28d9 !important; /* ungu medium */
+    }
+
+    /* Badge colors (ubah ke variasi ungu pastel juga) */
+    .badge {
+        border-radius: 8px;
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+
+        .badge.bg-primary {
+            background: linear-gradient(135deg, #c084fc, #9333ea) !important;
+        }
+
+        .badge.bg-success {
+            background: linear-gradient(135deg, #a78bfa, #7c3aed) !important;
+        }
+
+        .badge.bg-info {
+            background: linear-gradient(135deg, #e9d5ff, #a855f7) !important;
+            color: #4c1d95 !important;
+        }
+
+        .badge.bg-warning {
+            background: linear-gradient(135deg, #f3e8ff, #c084fc) !important;
+            color: #581c87 !important;
+        }
+</style>
+
 <section class="content-header">
     <h1>
         Profile

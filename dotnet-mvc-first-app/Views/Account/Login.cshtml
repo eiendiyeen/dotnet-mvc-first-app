@@ -6,17 +6,100 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Log in</title>
+    <title>Login</title>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="~/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+
+    <!-- AdminLTE -->
     <link rel="stylesheet" href="~/dist/css/adminlte.min.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f4f6f9; /* abu-abu soft */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* full tinggi layar */
+            margin: 0;
+        }
+
+        .login-box {
+            width: 420px; /* kotak lebih besar */
+        }
+
+        .login-logo a {
+            font-weight: 600;
+            color: #1f2937; /* abu gelap */
+            font-size: 28px;
+        }
+
+        .card {
+            border-radius: 14px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border: none;
+        }
+
+        .login-card-body {
+            border-radius: 14px;
+            padding: 40px; /* lebih luas */
+            background: #fff;
+        }
+
+        .login-box-msg {
+            font-size: 15px;
+            color: #4b5563;
+            margin-bottom: 25px;
+        }
+
+        .form-control {
+            border-radius: 10px;
+            font-size: 15px;
+            height: 45px;
+        }
+
+        .input-group-text {
+            border-radius: 0 10px 10px 0;
+            background-color: #f9fafb;
+            color: #374151;
+        }
+
+        .btn-primary {
+            background: #2563eb; /* biru */
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 15px;
+            height: 45px;
+        }
+
+            .btn-primary:hover {
+                background: #1d4ed8;
+            }
+
+        .icheck-primary label {
+            font-size: 14px;
+            color: #374151;
+        }
+
+        .mb-1 a, .mb-0 a {
+            color: #2563eb;
+            font-size: 14px;
+        }
+
+            .mb-1 a:hover, .mb-0 a:hover {
+                text-decoration: underline;
+            }
+    </style>
 </head>
-<body class="hold-transition login-page">
+<body>
     <div class="login-box">
         <div class="login-logo">
-            <a href="#"><b>Admin</b>LTE</a>
+            <a href="#"><b>Login</b></a>
         </div>
         <div class="card">
             <div class="card-body login-card-body">
@@ -39,7 +122,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mb-3">
                         <div class="col-8">
                             <div class="icheck-primary">
                                 <input type="checkbox" id="remember">
@@ -63,6 +146,7 @@
             </div>
         </div>
     </div>
+
     <script src="~/plugins/jquery/jquery.min.js"></script>
     <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="~/dist/js/adminlte.min.js"></script>
