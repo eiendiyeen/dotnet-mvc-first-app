@@ -2,37 +2,93 @@
     ViewData["Title"] = "Home Page";
 }
 <style>
-    .breadcrumb > li {
-        margin-right: 10px;
+    /* === Tema Ungu Pastel Consistent === */
+    .content-header h1 {
+        font-size: 32px; /* gedein */
+        font-weight: 700; /* bold */
+        color: #000; /* ungu tua biar tegas */
+        margin-bottom: 10px;
     }
 
-        .breadcrumb > li + li:before {
-            padding: 0 8px;
-            color: #6c757d;
-        }
+    .content-header small {
+        font-size: 16px;
+        color: #000; /* ungu medium */
+        font-weight: 500;
+    }
+    body {
+        background: #f3e8ff; /* background ungu pastel lembut */
+    }
 
     .breadcrumb {
-        background: #f9f9f9;
-        padding: 6px 12px;
-        border-radius: 6px;
+        background: #ede9fe; /* ungu pastel muda */
+        padding: 8px 14px;
+        border-radius: 8px;
         font-size: 14px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
     }
+
+        .breadcrumb > li {
+            margin-right: 10px;
+            color: #6b21a8;
+            font-weight: 500;
+        }
+
+            .breadcrumb > li + li:before {
+                padding: 0 8px;
+                color: #7c3aed;
+                content: "›";
+            }
+
+        .breadcrumb a {
+            color: #6d28d9;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+            .breadcrumb a:hover {
+                color: #4c1d95;
+                text-decoration: underline;
+            }
 
     .content-header {
         display: flex;
-        justify-content: center; /* posisikan di tengah */
-        margin-top: 10px;
+        justify-content: center;
+        margin-top: 15px;
+        margin-bottom: 20px;
     }
+
+    h1.display-4 {
+        color: #5b21b6; /* ungu lebih tegas */
+        font-weight: 700;
+    }
+
+    p {
+        color: #4b5563; /* abu gelap biar teks jelas */
+    }
+
+        p a {
+            color: #7c3aed;
+            font-weight: 600;
+        }
+
+            p a:hover {
+                color: #5b21b6;
+            }
 </style>
+
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <h1 class="display-4">Welcome! </h1>
     <section class="content-header">
         <ol class="breadcrumb">
-            <li><a href="@Url.Action("Index", "Dashboard")"><i class="fa fa-Dashboard"></i> DashBoard</a></li>
+            <li><a href="@Url.Action("Index", "Dashboard")"><i class="fa fa-dashboard"></i> Dashboard</a></li>
             <li><a href="@Url.Action("Index", "Profile")"><i class="fa fa-user"></i> Profile</a></li>
             <li><a href="@Url.Action("Index", "Blog")"><i class="fa fa-book"></i> Blog</a></li>
-
         </ol>
     </section>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>
+        Learn about
+        <a href="https://learn.microsoft.com/aspnet/core">
+            building Web apps with ASP.NET Core
+        </a>.
+    </p>
 </div>
